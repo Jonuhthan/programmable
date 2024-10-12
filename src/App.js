@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
 import { AuthContextProvider } from './context/AuthContext';
+import Protected from './components/Protected';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Routes>
             {/* root page directs to landing page */}
             <Route path="/" element={<LandingPage />} />
-            <Route path="/home" element={<HomePage />} />
+            {/* <Route path="sign-in" element={<SignInPage />} /> */}
+            {/* Wrap home with protected to prevent null user access */}
+            <Route path="/home" element={<Protected><HomePage /></Protected>} />
           </Routes>
         </Router>
       </div>
