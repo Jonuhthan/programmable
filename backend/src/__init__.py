@@ -1,13 +1,13 @@
-# Intialize Flask Application here
+# Intialize Flask Application
 from flask import Flask
 from .models import db  # Import the database instance from models
-from .routes import bp as routes_bp  # Import routes
 
 def create_app():
     app = Flask(__name__)  # Create a new Flask app
     app.config.from_object('config.Config')  # Load configuration from config.py
 
-    db.init_app(app)  # Initialize the database with the app
-    app.register_blueprint(routes_bp)  # Register the routes
+    with app.app_context():
+        db.init_app(app)  # Initialize the database with the app
 
-    return app  # Return the initialized app
+        from . import routes  # Import routes
+        return app # Return the app
