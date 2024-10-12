@@ -65,7 +65,7 @@ class RecommendationSystem:
         return question
 
     def update_learning_history(self, question_id, correct):
-        """Update learning history based on user response."""
+        """Update learning history based on user response and manage daily streak progress."""
         history_entry = LearningHistory(
             user_id=self.user_id,
             question_id=question_id,
@@ -73,4 +73,29 @@ class RecommendationSystem:
             attempt_date=datetime.now()  # Current date and time
         )
         db.session.add(history_entry)  # Add to the session
-        db.session.commit()  # Commit the transaction
+        
+        user = User.query.get(self.user_id)  # Fetch user details
+        reset_daily_progress(user)  # Check if daily progress needs resetting
+
+        if correct:
+            user.daily_progress += 10.0  # Increment daily progress by 10%
+            update_streak(user)  # Check if streak should be updated
+
+        db.session.commit()  # Commit all changes
+
+
+# Helper Methods
+
+def reset_daily_progress(user):
+    """Reset daily progress for the user if it's a new day."""
+    if user.last_streak_update is None or user.last_streak_update.date() < datetime.now().date():
+        user.daily_progress = 0  # Reset daily progress to 0
+        user.last_streak_update = datetime.now()  # Update last streak update date
+        db.session.commit()  # Commit changes to the database
+
+def update_streak(user):
+    """Update user's streak based on daily progress."""
+    if user.daily_progress >= 100:
+        user.streak += 1  # Increment streak
+        user.daily_progress = 0  # Reset progress after increment
+        db.session.commit()  # Commit changes

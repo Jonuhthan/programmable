@@ -9,9 +9,9 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     learning_history = db.relationship('LearningHistory', backref='user', lazy=True)
-    streak = db.Column(db.Integer, default=0)  # Current streak count
-    daily_progress = db.Column(db.Integer, default=0)  # Progress towards daily streak
-    last_reset = db.Column(db.DateTime)  # Track last reset date for daily progress
+    streak = db.Column(db.Integer, default=0)  # Track user's streak
+    daily_progress = db.Column(db.Integer, default=0)  # Track daily progress as an integer (0-100)
+    last_streak_update = db.Column(db.DateTime)  # Track last date when the streak was updated
 
 class Question(db.Model):
     """Model to represent a question."""
