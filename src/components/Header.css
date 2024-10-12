@@ -17,6 +17,11 @@ nav {
     font-weight: bold;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .nav-links {
     list-style: none;
     display: flex;

@@ -1,15 +1,19 @@
 import React from 'react';
 import './AuthButtons.css';
 import { UserAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const SignOut = () => {
   // destructure object
   const { googleSignOut } = UserAuth();
+  const navigate = useNavigate();
 
-  // make sign-in call
+  // make sign-out call
   const handleGoogleSignOut = async () => {
     try {
       await googleSignOut();
+      navigate("/");  // Redirect to the landing page
+
     } catch (error) {
       console.log(error);
     }
@@ -17,7 +21,7 @@ const SignOut = () => {
 
   return (
     <div>
-      <button className="sign-in" onClick={handleGoogleSignOut}>Sign Out</button>
+      <button className="sign-in-or-out" onClick={handleGoogleSignOut}>Sign Out</button>
     </div>
   );
 };

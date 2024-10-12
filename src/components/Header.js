@@ -11,7 +11,7 @@ const Header = () => {
         <div>
             <header>
                 <nav>
-                    <div className="logo">Programmable</div>
+                    <div className="logo"><a href="/">Programmable</a></div>
                     <ul className="nav-links">
                         <li><a href="#about">About</a></li>
                         <li><a href="#features">Features</a></li>

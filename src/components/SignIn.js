@@ -13,22 +13,15 @@ const SignIn = () => {
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
+      navigate("/home");  // redirect to home
     } catch (error) {
       console.log(error);
     }
   };
 
-  // after signing in and validating user, redirect them to problem home page
-  useEffect(() => {
-    if (user != null) {
-      // URI user is taken to, similar to next router
-      navigate("/home");
-    }
-  }, [user]);
-
   return (
     <div>
-      <button className="sign-in" onClick={handleGoogleSignIn}>Sign In</button>
+      <button className="sign-in-or-out" onClick={handleGoogleSignIn}>Sign In</button>
     </div>
   );
 };

@@ -12,16 +12,11 @@
     transition: background-color 0.3s;
 }
 
-.sign-in {
+.sign-in-or-out {
     background-color: #1db954;
     color: white;
 }
 
-.sign-up {
-    background-color: #ffffff;
-    color: #121212;
-}
-
-.sign-in:hover, .sign-up:hover {
+.sign-in-or-out:hover {
     opacity: 0.8;
 }
