@@ -12,19 +12,14 @@ class User(db.Model):
     streak = db.Column(db.Integer, default=0)  # Track user's streak of correct answers
 
 class Question(db.Model):
-    """Model to represent a question with difficulty levels."""
-    id = db.Column(db.Integer, primary_key=True)  # Primary key for the question
-    subtopic = db.Column(db.String(100), nullable=False)  # Topic of the question
-    DIFFICULTY_CHOICES = [
-        (1, 'Easy'),       # 1: Easy difficulty
-        (2, 'Medium'),     # 2: Medium difficulty
-        (3, 'Hard')        # 3: Hard difficulty
-    ]
-    difficulty = db.Column(db.Integer, nullable=False)  # Store difficulty level as an integer
-    question_text = db.Column(db.String(200), nullable=False)  # Text of the question
-    choices = db.Column(db.JSON, nullable=False)  # Multiple choices stored as JSON
+    """Model to represent a question."""
+    id = db.Column(db.Integer, primary_key=True)
+    topic = db.Column(db.String(100), nullable=False)  # Main topic of the question
+    subtopic = db.Column(db.String(100), nullable=False)  # Subtopic of the question
+    difficulty = db.Column(db.Integer, nullable=False)  # Difficulty: 1 (Easy), 2 (Medium), 3 (Hard)
+    question_text = db.Column(db.String(200), nullable=False)  # Question content
+    choices = db.Column(db.JSON, nullable=False)  # Multiple choices
     answer = db.Column(db.String(100), nullable=False)  # Correct answer
-
 
 class LearningHistory(db.Model):
     """Model to track user's learning history with questions."""
