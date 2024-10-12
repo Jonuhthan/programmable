@@ -1,56 +1,76 @@
-"""Class to manage questions and recommendations using a priority queue."""
+from collections import deque
+from queue import PriorityQueue
+from datetime import datetime
+from .models import User, Question, LearningHistory, db
 
-import heapq
-from datetime import datetime, timedelta
+class RecommendationSystem:
+    """Class to manage question recommendations using an Anki-like algorithm."""
 
-class QuestionManager:
-    def __init__(self):
-        self.priority_queue = []
-        self.question_map = {}
+    def __init__(self, user_id, selected_topic):
+        self.user_id = user_id
+        self.selected_topic = selected_topic  # Track selected topic
+        self.user = User.query.get(user_id)  # Fetch user details
+        self.question_pool = self.create_question_pool(selected_topic)  # Initialize question pool
+        self.priority_queue = PriorityQueue()  # Priority queue for recommendations
 
+    def create_question_pool(self, topic):
+        """Create a question pool for a specific topic."""
+        return Question.query.filter_by(topic=topic).all()  # Fetch questions for the topic
 
-    """
-        Add a question to the priority queue and the question map.
+    def populate_priority_queue(self):
+        """Populate the priority queue with questions based on user history and difficulty."""
+        for question in self.question_pool:
+            score = self.calculate_priority_score(question)  # Calculate priority score
+            self.priority_queue.put((score, question))  # Add to queue
+
+    def calculate_priority_score(self, question):
+        """Calculate the priority score for a question based on user performance."""
+        history = LearningHistory.query.filter_by(user_id=self.user_id, question_id=question.id).all()
         
-        Args:
-            question (Question): The question to be added.
-    """
-    def add_question(self, question):
-        heapq.heappush(self.priority_queue, question)
-        self.question_map[question.id] = question
-
-
-    def get_next_question(self):
-        """
-        Get the next question to review based on the priority queue.
+        # Start with the question's difficulty as the base score
+        score = question.difficulty  
         
-        Returns:
-            Question: The next question that is due for review, or None if there are no questions.
-        """
-        while self.priority_queue:
-            question = heapq.heappop(self.priority_queue)  # Get the question with the nearest next review time
-            if question.next_review <= datetime.now():  # Check if the question is due for review
-                return question  # Return the due question
-        return None  # No questions are due for review
-    
+        if history:
+            for entry in history:
+                if entry.correct:
+                    score -= 1  # Penalize for correct answers
+                else:
+                    score += 2  # Reward for incorrect answers
 
+        # If the user is weak or new to this subtopic, adjust to easier difficulty
+        if self.is_user_weak_in_subtopic(question.subtopic):
+            score = min(score, 3)  # Limit score to easy questions
 
+        return score
 
-    def update_question(self, question_id, correct):
-        """
-        Update the review time for a question based on whether the answer was correct or not.
+    def is_user_weak_in_subtopic(self, subtopic):
+        """Check if the user is weak in a specific subtopic based on their history."""
+        # Check history for the user's performance in this subtopic
+        subtopic_history = LearningHistory.query.join(Question).filter(
+            LearningHistory.user_id == self.user_id,
+            Question.subtopic == subtopic
+        ).all()
         
-        Args:
-            question_id (int): The ID of the question.
-            correct (bool): Whether the user's answer was correct.
-        """
-        question = self.question_map.get(question_id)
-        if question:
-            # Update the review time based on performance
-            if correct:
-                question.next_review = datetime.now() + timedelta(days=3)  # Increase interval for correct answers
-            else:
-                question.next_review = datetime.now() + timedelta(days=1)  # Decrease interval for wrong answers
-            # Re-add the updated question back to the priority queue
-            heapq.heappush(self.priority_queue, question)
-    
+        # Determine if the user has mostly incorrect answers
+        incorrect_count = sum(1 for entry in subtopic_history if not entry.correct)
+        total_attempts = len(subtopic_history)
+
+        return total_attempts > 0 and (incorrect_count / total_attempts) > 0.5  # More than 50% incorrect
+
+    def recommend_question(self):
+        """Recommend a question from the priority queue."""
+        if self.priority_queue.empty():
+            self.populate_priority_queue()  # Populate if empty
+        score, question = self.priority_queue.get()  # Fetch the highest priority question
+        return question
+
+    def update_learning_history(self, question_id, correct):
+        """Update learning history based on user response."""
+        history_entry = LearningHistory(
+            user_id=self.user_id,
+            question_id=question_id,
+            correct=correct,
+            attempt_date=datetime.now()  # Current date and time
+        )
+        db.session.add(history_entry)  # Add to the session
+        db.session.commit()  # Commit the transaction
