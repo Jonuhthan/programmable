@@ -1,19 +1,36 @@
-import React, { createContext, useContext } from "react";
-import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import React, { createContext, useContext, useEffect } from "react";
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../firebase";
+import { useState } from "react";
 
+// instantiate context object
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
+    const [user, setUser] = useState({});
+
     const googleSignIn = async () => {
         const provider = new GoogleAuthProvider();
         try {
+            // attempt sign in to auth instance with Google's provider instance
             const result = await signInWithPopup(auth, provider);
             console.log("Sign-in successful.");
         } catch (error) {
             console.log(error);
         }
     };
+
+    // whenever someone signs in or out, update the user appropriately
+    // runs on first render, then unsubscribes before rerunning effect
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            console.log("User", currentUser);
+        });
+        return ()=> {
+            unsubscribe();
+        }
+    }, []);
 
     const googleSignOut = async () => {
         try {
