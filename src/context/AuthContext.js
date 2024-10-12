@@ -13,7 +13,7 @@ export const AuthContextProvider = ({ children }) => {
         const provider = new GoogleAuthProvider();
         try {
             // attempt sign in to auth instance with Google's provider instance
-            const result = await signInWithPopup(auth, provider);
+            await signInWithPopup(auth, provider);
             console.log("Sign-in successful.");
         } catch (error) {
             console.log(error);
