@@ -6,10 +6,12 @@ db = SQLAlchemy()  # Initialize SQLAlchemy
 
 class User(db.Model):
     """Model to represent a user in the system."""
-    id = db.Column(db.Integer, primary_key=True)  # Primary key for the user
-    username = db.Column(db.String(80), unique=True, nullable=False)  # Unique username
-    learning_history = db.relationship('LearningHistory', backref='user', lazy=True)  # Relationship to learning history
-    streak = db.Column(db.Integer, default=0)  # Track user's streak of correct answers
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    learning_history = db.relationship('LearningHistory', backref='user', lazy=True)
+    streak = db.Column(db.Integer, default=0)  # Current streak count
+    daily_progress = db.Column(db.Integer, default=0)  # Progress towards daily streak
+    last_reset = db.Column(db.DateTime)  # Track last reset date for daily progress
 
 class Question(db.Model):
     """Model to represent a question."""
