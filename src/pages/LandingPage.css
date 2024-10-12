@@ -27,7 +27,7 @@ body {
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: 0.05em;
-    animation: typing 10s steps(13, end) infinite, blink-caret .75s step-end infinite;
+    animation: typing 9s steps(13, end) infinite, blink-caret .75s step-end infinite;
 }
 
 /* quickly type text out, pause, then reverse */
@@ -48,21 +48,6 @@ body {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     margin-top: 1.25rem;
-}
-
-.start-button {
-    font-size: xx-large;
-    font-family: "Consolas";
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #1db954;
-    color: white;
-}
-
-.start-button:hover {
-    opacity: 0.8;
 }
 
 section {

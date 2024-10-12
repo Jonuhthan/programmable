@@ -1,6 +1,7 @@
 import React from 'react';
 import './LandingPage.css';
 import Header from './../components/Header';
+import Start from '../components/Start';
 
 const LandingPage = () => {
     return (
@@ -11,7 +12,7 @@ const LandingPage = () => {
                     <h1>Programmable</h1>
                 </div>
                 <p>Learn, build, and develop your computer science fundamentals.</p>
-                <button className="start-button">Get Started</button>
+                <Start />
             </section>
 
             <section id="about">

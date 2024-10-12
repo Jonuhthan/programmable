@@ -15,10 +15,10 @@ function App() {
         <Router>
           <Routes>
             {/* root page directs to landing page */}
-            <Route path="/" element={<LandingPage />} />
-            {/* <Route path="sign-in" element={<SignInPage />} /> */}
+            <Route path="/" element={<LandingPage />} />            
             {/* Wrap home with protected to prevent null user access */}
             <Route path="/home" element={<Protected><HomePage /></Protected>} />
+            {/* <Route path="/quiz" element={<ProblemPage />} /> */}
           </Routes>
         </Router>
       </div>

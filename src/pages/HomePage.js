@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './../components/Header';
 import { UserAuth } from '../context/AuthContext';
+import Header from '../components/Header';
 
 const HomePage = () => {
     const { user } = UserAuth();
