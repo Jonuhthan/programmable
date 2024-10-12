@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './AuthButtons.css';
 import { UserAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
   // destructure object
-  const { googleSignIn } = UserAuth();
+  const { user, googleSignIn } = UserAuth();
+  // navigate instance
+  const navigate = useNavigate();
+
   // make sign-in call
   const handleGoogleSignIn = async () => {
     try {
@@ -13,6 +17,14 @@ const SignIn = () => {
       console.log(error);
     }
   };
+
+  // after signing in and validating user, redirect them to problem home page
+  useEffect(() => {
+    if (user != null) {
+      // URI user is taken to, similar to next router
+      navigate("/home");
+    }
+  }, [user]);
 
   return (
     <div>
