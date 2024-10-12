@@ -42,8 +42,8 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     return (
-        // global context, all children receive state
-        <AuthContext.Provider value={{ googleSignIn, googleSignOut }}>
+        // global context, all children receive these props
+        <AuthContext.Provider value={{ user, googleSignIn, googleSignOut }}>
             {children}
         </AuthContext.Provider>
     );

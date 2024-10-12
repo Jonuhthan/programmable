@@ -2,13 +2,14 @@ import React from 'react';
 import './AuthButtons.css';
 import { UserAuth } from '../context/AuthContext';
 
-const SignIn = () => {
+const SignOut = () => {
   // destructure object
-  const { googleSignIn } = UserAuth();
+  const { googleSignOut } = UserAuth();
+
   // make sign-in call
-  const handleGoogleSignIn = async () => {
+  const handleGoogleSignOut = async () => {
     try {
-      await googleSignIn();
+      await googleSignOut();
     } catch (error) {
       console.log(error);
     }
@@ -16,9 +17,9 @@ const SignIn = () => {
 
   return (
     <div>
-      <button className="sign-in" onClick={handleGoogleSignIn}>Sign In</button>
+      <button className="sign-in" onClick={handleGoogleSignOut}>Sign Out</button>
     </div>
   );
 };
 
-export default SignIn;
+export default SignOut;
