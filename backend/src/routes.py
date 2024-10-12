@@ -20,6 +20,20 @@ def get_question_recommendation():
         'difficulty': question.difficulty
     })
 
+@bp.route('/user/streak', methods=['GET'])
+def get_user_streak():
+    """Get the user's daily streak and progress towards it."""
+    user_id = request.args.get('user_id')  # Get user ID from request
+    user = User.query.get(user_id)  # Fetch user details
+    
+    if not user:
+        return jsonify({"message": "User not found."}), 404
+
+    return jsonify({
+        'streak': user.streak,
+        'daily_progress': user.daily_progress  # Return progress as an integer
+    })
+
 
 @bp.route('/performance', methods=['POST'])
 def update_performance():
