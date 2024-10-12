@@ -35,30 +35,3 @@ nav {
 .nav-links a:hover {
     color: #1db954;
 }
-
-.auth-buttons {
-    display: flex;
-}
-
-.auth-buttons button {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.sign-in {
-    background-color: #1db954;
-    color: white;
-}
-
-.sign-up {
-    background-color: #ffffff;
-    color: #121212;
-}
-
-.sign-in:hover, .sign-up:hover {
-    opacity: 0.8;
-}

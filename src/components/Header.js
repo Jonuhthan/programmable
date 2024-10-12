@@ -1,4 +1,6 @@
 import React from 'react';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 import './Header.css';
 
 const Header = () => {
@@ -13,8 +15,8 @@ const Header = () => {
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                     <div className="auth-buttons">
-                        <button className="sign-in">Sign In</button>
-                        <button className="sign-up">Sign Up</button>
+                        <SignIn />
+                        <SignUp />
                     </div>
                 </nav>
             </header>
