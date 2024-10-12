@@ -41,3 +41,8 @@ nav {
 .nav-links a:hover {
     color: #1db954;
 }
+
+.welcome {
+    display: flex;
+    font-size: 1.75rem;
+}

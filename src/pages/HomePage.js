@@ -1,12 +1,12 @@
 import React from 'react';
 import { UserAuth } from '../context/AuthContext';
-import Header from '../components/Header';
+import HeaderHome from '../components/HeaderHome';
 
 const HomePage = () => {
     const { user } = UserAuth();
     return (
         <div>
-            <Header />
+            <HeaderHome />
             Welcome, {user.displayName}
         </div>
     );
