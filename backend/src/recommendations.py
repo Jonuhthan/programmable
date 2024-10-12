@@ -81,7 +81,7 @@ class RecommendationSystem:
             user.daily_progress += 10.0  # Increment daily progress by 10%
             update_streak(user)  # Check if streak should be updated
 
-        db.session.commit()  # Commit all changes
+        db.session.commit()  # Commit changes
 
 
 # Helper Methods
