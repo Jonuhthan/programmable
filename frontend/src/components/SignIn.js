@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './SignButtons.css';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';

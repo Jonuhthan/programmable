@@ -4,7 +4,7 @@ import { UserAuth } from '../context/AuthContext';
 import './Header.css';
 import SignOut from './SignOut';
 
-const HeaderHome = () => {
+const HeaderGeneral = ({text}) => {
     const { user } = UserAuth();
 
     return (
@@ -12,8 +12,8 @@ const HeaderHome = () => {
             <header>
                 <nav>
                     <div className="logo"><a href="/">Programmable</a></div>
-                    <div className="welcome">
-                        Welcome back, {user.displayName} 👋
+                    <div className="placeholder">
+                        {text}
                     </div>
                     <div className="auth-buttons">
                         {user?.displayName ? (
@@ -28,4 +28,4 @@ const HeaderHome = () => {
     );
 };
 
-export default HeaderHome;
+export default HeaderGeneral;
