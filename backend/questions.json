@@ -1,0 +1,1524 @@
+[
+    {
+        "subtopic": "Java Basics",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following are a valid declaration and instantiation of a primitive variable?",
+        "choices": [
+            "char last = 'j.';",
+            "char middle = 'j';",
+            "char first = \"j\";",
+            "char initial = j;"
+        ],
+        "answer": "char middle = 'j';"
+    },
+    {
+        "subtopic": "Java Primitive Types",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following is NOT one of Java’s primitive types?",
+        "choices": [
+            "int",
+            "char",
+            "double",
+            "short",
+            "String"
+        ],
+        "answer": "String"
+    },
+    {
+        "subtopic": "Integer Division",
+        "topic": "Programming",
+        "difficulty": 3,
+        "question_text": "Assume that x, y, and z are all ints equal to 50, 20, and 6 respectively. What is the result of x / y / z?",
+        "choices": [
+            "A compile error as this is syntactically invalid",
+            "0",
+            "16",
+            "12",
+            "A run-time error because this is a division by 0"
+        ],
+        "answer": "0"
+    },
+    {
+        "subtopic": "Float Division",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What value will z have if we execute the following assignment statement? float z = 5 / 10;",
+        "choices": [
+            "z will equal 0.5",
+            "z will equal 5.0",
+            "No value, a run-time error arises because z is a float and 5/10 is an int",
+            "z will equal 0.0"
+        ],
+        "answer": "z will equal 0.0"
+    },
+    {
+        "subtopic": "Creating Constants",
+        "topic": "Programming",
+        "difficulty": 1,
+        "question_text": "In order to create a constant, you would use which of the following Java reserved words?",
+        "choices": [
+            "class",
+            "private",
+            "final",
+            "static"
+        ],
+        "answer": "final"
+    },
+    {
+        "subtopic": "Switch Statement",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will print? int x = 0; String word = \"\"; switch (x+1) { case 4: word = \"peanut \"; case 3: word = \"green bean \"; case 2: word = \"cabbage \"; case 1: word = \"strawberry \"; default: word = \"apple \"; } System.out.println(\"The secret word is \" + word);",
+        "choices": [
+            "The secret word is apple",
+            "The secret word is strawberry",
+            "The code does not produce any output.",
+            "The secret word is strawberry apple"
+        ],
+        "answer": "The secret word is apple"
+    },
+    {
+        "subtopic": "Character Printing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘B’ printed?",
+        "choices": [
+            "12",
+            "3",
+            "4",
+            "1"
+        ],
+        "answer": "4"
+    },
+    {
+        "subtopic": "Nested Loops",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will be output by this code segment? for (int i = 5; i > 0; i--) { for (int j = 1; j <= i; j++) { System.out.print (j*j + \" \"); } System.out.println(); }",
+        "choices": [
+            "1 4 9 16 25",
+            "1 4 9 16",
+            "1 4 9",
+            "1 4"
+        ],
+        "answer": "1 4 9 16 25"
+    },
+    {
+        "subtopic": "If-Else Structures",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following outline of a nested if-else structure which has more if clauses than else clauses. Which of the statements below is true regarding this structure?",
+        "choices": [
+            "statement2 will only execute if condition1 is true and condition2 is false",
+            "statement2 will only execute if condition1 is false, it does not matter what condition2 is",
+            "statement2 will never execute",
+            "syntactically it is invalid to have more if clauses than else clauses",
+            "statement2 will only execute if condition1 is false and condition2 is false"
+        ],
+        "answer": "statement2 will only execute if condition1 is true and condition2 is false"
+    },
+    {
+        "subtopic": "If-Else Structures",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "All if / if-else structures can be re-written as a switch statement.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False"
+    },
+    {
+        "subtopic": "Character Printing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘C’ printed?",
+        "choices": [
+            "1",
+            "4",
+            "3",
+            "12"
+        ],
+        "answer": "12"
+    },
+    {
+        "subtopic": "Loop Outputs",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code, then answer the question that follows: String[] alienNames = {\"Zorg\", \"Kaalmitee\", \"Torkhg\"}; String[] colors = {\"teal\", \"indigo\", \"orange\"}; for (String name : alienNames) { for (String color : colors) { System.out.println(name + \" likes the color \" + color); } } How many lines (number of lines) of output will this code produce?",
+        "choices": [
+            "4",
+            "3",
+            "12",
+            "0",
+            "9",
+            "6",
+            "7"
+        ],
+        "answer": "12"
+    },
+    {
+        "subtopic": "Java Pass By",
+        "topic": "Programming",
+        "difficulty": 1,
+        "question_text": "Java arguments are always \"pass by value\".",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True"
+    },
+    {
+        "subtopic": "Method Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following method: public static void swap (int x, int y) { int temp; temp = x; x = y; y = temp; } If, in another method in the same class we have the following code: int one = 1; int two = 2; swap(one, two); System.out.println(one + \" \" + two); What will be printed?",
+        "choices": [
+            "2 2",
+            "1 2",
+            "1 1",
+            "2 1",
+            "Nothing is printed because the code does not run."
+        ],
+        "answer": "1 2"
+    },
+    {
+        "subtopic": "Primitive vs Reference",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What is the main difference between a variable that is a primitive data type versus a reference?",
+        "choices": [
+            "Primitive values are stored in the runtime stack while reference data is stored on the heap",
+            "There is no difference between them",
+            "Primitive values are stored on the heap and reference data is store in the runtime stack",
+            "Primitives can be used anywhere, references can only be used in classes",
+            "Primitives are part of the Java language, while reference data type are classes defined by libraries"
+        ],
+        "answer": "Primitive values are stored in the runtime stack while reference data is stored on the heap"
+    },
+    {
+        "subtopic": "Object References",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code. What will be printed? public class Donkey { public int numberOfLegs = 4; public static void main(String[] args) { Donkey mabel = new Donkey(); Donkey janice = new Donkey(); mabel = janice; janice.numberOfLegs -= 1; System.out.print(mabel.numberOfLegs); System.out.print(\",\"); System.out.print(janice.numberOfLegs); } }",
+        "choices": [
+            "4,3",
+            "3,3",
+            "4,4",
+            "3,4"
+        ],
+        "answer": "3,4"
+    },
+    {
+        "subtopic": "Object Reference Modification",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "I have two references object1 and object2 (both are of the same type). I want to modify these references such that “object1 == object2” is true. Which line of code will accomplish this task?",
+        "choices": [
+            "object1.toString() = object2.toString();",
+            "object1 == object2 will ALWAYS evaluate to true no matter what.",
+            "object1 = True;",
+            "object2 = True;",
+            "object1 = object2;"
+        ],
+        "answer": "object1 = object2;"
+    },
+    {
+        "subtopic": "Access Levels",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the class below. Where can the variable balance be legally accessed directly? public class Account { private double balance; }",
+        "choices": [
+            "within the Account class only",
+            "anywhere; any piece of code can access balance directly",
+            "within the Account class and any other classes in the same package",
+            "nowhere, it's not possible to access balance directly"
+        ],
+        "answer": "within the Account class only"
+    },
+    {
+        "subtopic": "Method Overloading",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the code below. Will it compile and run with the appropriate calls? private static void display(int a) { System.out.println(\"Arguments: \" + a); } private static void display(int a, int b) { System.out.println(\"Arguments: \" + a + \" and \" + b); } private static void display(String st1, String st2) { System.out.println(\"Arguments: \" + st1 + \" and \" + st2); }",
+        "choices": [
+            "No, the code will compile, but some code will be unreachable",
+            "No, the code will not compile",
+            "No, the code will compile but throw a runtime error",
+            "Yes, it will work"
+        ],
+        "answer": "Yes, it will work"
+    },
+    {
+        "subtopic": "Compilation Errors",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "The following method will not compile. Why not? public int countTeachingAssistants(Student[] roster) { for ( Student s : roster ) { if (s.isInterested()) { personCount++; } } }",
+        "choices": [
+            "parameters are invalid/wrong format",
+            "incorrect braces { }",
+            "roster is not iterable",
+            "missing return value"
+        ],
+        "answer": "missing return value"
+    },
+    {
+        "subtopic": "String Manipulation",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable index2? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); String part = temp.substring(0,4);",
+        "choices": [
+            "4",
+            "3",
+            "A compiler error occurs",
+            "5"
+        ],
+        "answer": "3"
+    },
+    {
+        "subtopic": "Pass By Value",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code. What will be printed? public class Donkey { public static void main(String[] args) { int x=5; doubler(x); System.out.println(x); } public static int doubler(int argument) { return argument * 2; }}",
+        "choices": [
+            "10",
+            "Nothing is printed because the code does not run.",
+            "2",
+            "5"
+        ],
+        "answer": "5"
+    },
+    {
+        "subtopic": "Substring Extraction",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable part? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); int len = temp.length(); String part = temp.substring(0,4);",
+        "choices": [
+            "CS2100",
+            "CS21",
+            "A compiler error occurs",
+            "CS210"
+        ],
+        "answer": "CS21"
+    },
+    {
+        "subtopic": "Length of String",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable len? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); int len = temp.length(); String part = temp.substring(0,4);",
+        "choices": [
+            "15",
+            "17",
+            "A compiler error occurs",
+            "16"
+        ],
+        "answer": "17"
+    },
+    {
+        "subtopic": "Array Indexing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in variable a? int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; int a = arr[arr.length / arr[3]];",
+        "choices": [
+            "An error occurs",
+            "4",
+            "2",
+            "3"
+        ],
+        "answer": "3"
+    },
+    {
+        "subtopic": "String Array Initialization",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following declaration, creation, and initialization of a String array called “cities” then answer the question that follows: String[] cities = {\"Charlottesville\", \"Edinburgh\", \"Lisbon\", \"Jakarta\", \"Dubai\", \"Tokyo\", \"Melbourne\", \"Buenos Aires\"}; What is the value in cities[0] and cities[5]?",
+        "choices": [
+            "\"Charlottesville\", \"Dubai\"",
+            "\"Charlottesville\", \"Tokyo\"",
+            "NULL, \"Dubai\"",
+            "\"Buenos Aires\", \"Lisbon\"",
+            "\"\", {\"Charlottesville\", \" Edinburgh\", \" Lisbon\", \" Jakarta\", \" Dubai\", \" Tokyo\"}"
+        ],
+        "answer": "\"Charlottesville\", \"Tokyo\""
+    },
+    {
+        "subtopic": "Array Indexing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in variable a? int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; int a = arr[arr[0]];",
+        "choices": [
+            "An error occurs",
+            "2",
+            "0",
+            "1"
+        ],
+        "answer": "0"
+    },
+    {
+        "subtopic": "Array Manipulation",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following loops would adequately add 1 to each element stored in values?",
+        "choices": [
+            "for(j = 1; j <= values.length; j++) { values[j] += 1; }",
+            "for(j = 0; j < values.length; j++) { values[j] += 1; }",
+            "for(j = 0; j <= values.length; j++) { values[j] += 1; }",
+            "for(j = 0; j < values.length–1; j++) { values[j] += 1; }",
+            "for(j = 1; j < values.length; j++) { values[j] += 1; }"
+        ],
+        "answer": "for(j = 0; j < values.length; j++) { values[j] += 1; }"
+    },
+    {
+        "subtopic": "Iterating Over Arrays",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the code below. Which loop will not work to iterate over the argument array? public void processPayroll(Check[] paychecks) { __________________ }",
+        "choices": [
+            "int t = 0; while ( t < paychecks.length ) { /*... process */ t++; }",
+            "for ( int p = 0; p < paychecks.length; p++ ) { /*... process */ }",
+            "for ( Check c : paychecks ) { /*... process */ }",
+            "for ( int i = 0; i < paychecks.length(); i++ ) { /*... process */ }"
+        ],
+        "answer": "for ( int i = 0; i < paychecks.length(); i++ ) { /*... process */ }"
+    },
+    {
+        "subtopic": "Output of Code",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the code below. What will be printed? public class Flower { public String stemColor; public Flower() { stemColor=\"green\"; } public static void main(String[] args) { Flower[] garden = new Flower[5]; System.out.println( garden[0].stemColor ); } }",
+        "choices": [
+            "nothing will print",
+            "An error will occur",
+            "null",
+            "green"
+        ],
+        "answer": "null"
+    },
+    {
+        "subtopic": "Function Outputs",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In HW 1 you were asked to implement the fuzzbizz function. What would the correct output for the following call? Method header: public static String fuzzbizz ( int one, int two, int input ) { … } fuzzbizz (3, 7, 27);",
+        "choices": [
+            "fuzzbizz",
+            "bizz",
+            "fuzz",
+            "none"
+        ],
+        "answer": "fuzz"
+    },
+    {
+        "subtopic": "Duplicate Removal",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In Lab 2 you were asked to remove all the duplicates in an array of Strings. The first part of this algorithm was to make a copy of the array parameter. Which of the following correctly does the copy?",
+        "choices": [
+            "public static String[] removeDup(String[] strArr) { String[] arrCopy = new String[strArr.length]; for (int i = 0; i < arrCopy.length; i++) arrCopy[i] = strArr[i]; ... }",
+            "public static String[] removeDup(String[] strArr) { String[] arrCopy = new String[strArr.length]; arryCopy = strArr; ... }",
+            "public static String[] removeDup(String[] strArr) { String[] arrCopy = new String[strArr.length]; for (int i = 0; i < arrCopy.length; i++) strArr[i] = arrCopy[i]; ... }",
+            "public static String[] removeDup(String[] strArr) { String[] arrCopy = new String[strArr.length]; for (String s : strArr) arrCopy = s; ... }"
+        ],
+        "answer": "public static String[] removeDup(String[] strArr) { String[] arrCopy = new String[strArr.length]; for (int i = 0; i < arrCopy.length; i++) arrCopy[i] = strArr[i]; ... }"
+    },
+    {
+        "subtopic": "Count Runs",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In HW 1 you were asked to implement the countRuns method. One way to implement this logic is to use a boolean variable to keep track of whether you are currently inside a run or not. This is a programming technique where we would call this boolean variable a _____________.",
+        "choices": [
+            "state variable",
+            "conditional variable",
+            "binary variable",
+            "counting variable"
+        ],
+        "answer": "state variable" 
+    },
+    {
+        "subtopic": "Java Variable Declaration",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following are a valid declaration and instantiation of a primitive variable?",
+        "choices": [
+            "char first = \"j\";",
+            "char initial = j;",
+            "char middle = 'j';",
+            "char last = 'j.';"
+        ],
+        "answer": "char middle = 'j';" 
+    },
+    {
+        "subtopic": "Java Primitive Types",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "The values of (double) 5 / 2 and (double) (5 / 2) are identical.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False" 
+    },
+    {
+        "subtopic": "Float Division",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What value will z have if we execute the following assignment statement? float z = 5 / 10;",
+        "choices": [
+            "z will equal 0.5",
+            "z will equal 0.0",
+            "z will equal 5.0",
+            "No value, a run-time error arises because z is a float and 5/10 is an int"
+        ],
+        "answer": "z will equal 0.0" 
+    },
+    {
+        "subtopic": "Integer Division",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Assume that x, y, and z are all ints equal to 50, 20, and 6 respectively. What is the result of x / y / z?",
+        "choices": [
+            "A run-time error because this is a division by 0",
+            "A compile error as this is syntactically invalid",
+            "12",
+            "16",
+            "0"
+        ],
+        "answer": "0" 
+    },
+    {
+        "subtopic": "Variable Declaration Errors",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following variable declarations will raise an error?",
+        "choices": [
+            "char x = ‘m’;",
+            "int n = 2.000;",
+            "int c = (int)16.4;",
+            "double[] d = {4.552, 6, 1.1};",
+            "String s = new String(“Hello World”);"
+        ],
+        "answer": "int n = 2.000;" 
+    },
+    {
+        "subtopic": "For Loop Conversion",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "All for loops can be re-written as while loops.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True" 
+    },
+    {
+        "subtopic": "Nested If-Else Structures",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following outline of a nested if-else structure which has more if clauses than else clauses. Which of the statements below is true regarding this structure?",
+        "choices": [
+            "statement2 will only execute if condition1 is true and condition2 is false",
+            "statement2 will only execute if condition1 is false, it does not matter what condition2 is",
+            "syntactically it is invalid to have more if clauses than else clauses",
+            "statement2 will never execute",
+            "statement2 will only execute if condition1 is false and condition2 is false"
+        ],
+        "answer": "statement2 will only execute if condition1 is true and condition2 is false" 
+    },
+    {
+        "subtopic": "Character Printing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘C’ printed? System.out.println('A'); for (int i = 0; i < 3; ++i) { System.out.println('B'); for (int j = 0; j < 4; j++) System.out.println('C'); System.out.println('D'); } System.out.println('E');",
+        "choices": [
+            "12",
+            "3",
+            "4",
+            "1"
+        ],
+        "answer": "12" 
+    },
+    {
+        "subtopic": "Nested Loops Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code, then answer the question that follows: String[] alienNames = {\"Zorg\", \"Kaalmitee\", \"Torkhg\"}; String[] colors = {\"teal\", \"indigo\", \"orange\"}; for (String name : alienNames) { for (String color : colors) { System.out.println(name + \" likes the color \" + color); } } How many lines (number of lines) of output will this code produce?",
+        "choices": [
+            "7",
+            "6",
+            "9",
+            "0",
+            "12",
+            "3",
+            "4"
+        ],
+        "answer": "6" 
+    },
+    {
+        "subtopic": "Conditional Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Assume that x, y, and z are all int variables. Consider the following code below. What is printed if x, y, and z are all equal to zero before the code segment executes? if (x == 0) { if (y == 1) z += 2; } else { z += 4; } System.out.print(z);",
+        "choices": [
+            "0",
+            "4",
+            "2",
+            "1"
+        ],
+        "answer": "4" 
+    },
+    {
+        "subtopic": "If-Else Structures",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "All if / if-else structures can be re-written as a switch statement.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False" 
+    },
+    {
+        "subtopic": "Character Printing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘B’ printed? System.out.println('A'); for (int i = 0; i < 3; ++i) { System.out.println('B'); for (int j = 0; j < 4; j++) System.out.println('C'); System.out.println('D'); } System.out.println('E');",
+        "choices": [
+            "12",
+            "3",
+            "4",
+            "1"
+        ],
+        "answer": "3" 
+    },
+    {
+        "subtopic": "Output of Code",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will the following code print? public class Donkey { public int numberOfLegs = 4; public static void main(String[] args) { Donkey mabel = new Donkey(); Donkey janice = new Donkey(); mabel = janice; janice.numberOfLegs -= 1; System.out.print(mabel.numberOfLegs); System.out.print(\",\"); System.out.print(janice.numberOfLegs); }}",
+        "choices": [
+            "4,3",
+            "3,3",
+            "4,4",
+            "3,4"
+        ],
+        "answer": "3,4" 
+    },
+    {
+        "subtopic": "Object Reference Modification",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "If a and b are both arrays of integers, then a = b; will copy the 0th element of b into the 0th element of a.",
+        "choices": [
+            "return true if a and b are aliases and return false otherwise",
+            "create an alias",
+            "copy all elements of b into a",
+            "return true if each corresponding element of b is equal to each corresponding element of a (that is, a[0] is equal to b[0], a[1] is equal to b[1] and so forth) and return false otherwise"
+        ],
+        "answer": "create an alias" 
+    },
+    {
+        "subtopic": "Variable Access Levels",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the class below. Where can the variable balance be legally accessed directly? public class Account { private double balance; }",
+        "choices": [
+            "within the Account class and any other classes in the same package",
+            "nowhere, it's not possible to access balance directly",
+            "within the Account class only",
+            "anywhere; any piece of code can access balance directly"
+        ],
+        "answer": "within the Account class only" 
+    },
+    {
+        "subtopic": "Memory Storage",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Suppose I instantiate an object like this: Point p1 = new Point(5,7); Which statement is true regarding how this variable is stored in memory?",
+        "choices": [
+            "p1 is a reference type, and stores the memory address of where the Point object is located in memory.",
+            "p1 is a reference type, and stores the object directly in memory at one location.",
+            "p1 is actually set to null, and doesn’t reference an object yet.",
+            "p1 is a primitive type, and stores the object directly in memory at one location."
+        ],
+        "answer": "p1 is a reference type, and stores the memory address of where the Point object is located in memory." 
+    },
+    {
+        "subtopic": "Method Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following method: public static void swap (int x, int y) { int temp; temp = x; x = y; y = temp; } If, in another method in the same class we have the following code: int one = 1; int two = 2; swap(one, two); System.out.println(one + \" \" + two); What will be printed?",
+        "choices": [
+            "1 1",
+            "12",
+            "11",
+            "Nothing is printed because the code does not run."
+        ],
+        "answer": "1 2" 
+    },
+    {
+        "subtopic": "String Manipulation",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable part? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); int len = temp.length(); String part = temp.substring(0,4);",
+        "choices": [
+            "CS21",
+            "CS2100",
+            "A compiler error occurs",
+            "CS2",
+            "CS210"
+        ],
+        "answer": "CS21" 
+    },
+    {
+        "subtopic": "String Indexing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable index? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); String part = temp.substring(0,4);",
+        "choices": [
+            "-1",
+            "A compiler error occurs",
+            "17",
+            "0"
+        ],
+        "answer": "-1" 
+    },
+    {
+        "subtopic": "String Length",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable len? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); int len = temp.length(); String part = temp.substring(0,4);",
+        "choices": [
+            "16",
+            "A compiler error occurs",
+            "17",
+            "15"
+        ],
+        "answer": "17" 
+    },
+    {
+        "subtopic": "Formal Parameters",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code. Which element is the Formal Parameter? public class Donkey { public int numberOfLegs=4; public static void main(String[] args) { Donkey mabel = new Donkey(); takeTripToMadLaboratory(mabel); System.out.println(mabel.numberOfLegs); } public static void takeTripToMadLaboratory(Donkey d) { d.numberOfLegs=d.numberOfLegs*2; }}",
+        "choices": [
+            "numberofLegs",
+            "mabel.numberofLegs",
+            "mabel",
+            "Donkey d"
+        ],
+        "answer": "Donkey d" 
+    },
+    {
+        "subtopic": "Method Overloading",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the code below. Will it compile and run with the appropriate calls? private static void display(int a) { System.out.println(\"Arguments: \" + a); } private static void display(int a, int b) { System.out.println(\"Arguments: \" + a + \" and \" + b); } private static void display(String st1, String st2) { System.out.println(\"Arguments: \" + st1 + \" and \" + st2); }",
+        "choices": [
+            "No, the code will not compile",
+            "No, the code will compile but throw a runtime error",
+            "Yes, it will work",
+            "No, the code will compile, but some code will be unreachable"
+        ],
+        "answer": "Yes, it will work" 
+    },
+    {
+        "subtopic": "Output of Code",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will the following code print out? public class Donkey { public static void main(String[] args) { int x=5; doubler(x); System.out.println(x); } public static int doubler(int argument) { return argument * 2; }}",
+        "choices": [
+            "10",
+            "Nothing is printed because the code does not run.",
+            "2",
+            "5"
+        ],
+        "answer": "5" 
+    },
+    {
+        "subtopic": "Array Initialization",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following declaration, creation, and initialization of a String array called “cities” then answer the question that follows: String[] cities = {\"Charlottesville\", \"Edinburgh\", \"Lisbon\", \"Jakarta\", \"Dubai\", \"Tokyo\", \"Melbourne\", \"Buenos Aires\"}; What is the value in cities[0] and cities[5]?",
+        "choices": [
+            "NULL, “Dubai”",
+            "“Charlottesville”, “Dubai”",
+            "“Buenos Aires”, “Lisbon”",
+            "“Charlottesville”, “Tokyo”"
+        ],
+        "answer": "“Charlottesville”, “Dubai”" 
+    },
+    {
+        "subtopic": "Array Indexing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in variable a? int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; int a = arr[arr[1] + arr[5] + arr[6]];",
+        "choices": [
+            "An error occurs",
+            "12",
+            "10",
+            "8"
+        ],
+        "answer": "10" 
+    },
+    {
+        "subtopic": "Array Indexing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in variable a? int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; int a = arr[ arr[7] - arr[10]];",
+        "choices": [
+            "3",
+            "An error occurs",
+            "0",
+            "7"
+        ],
+        "answer": "An error occurs" 
+    },
+    {
+        "subtopic": "Output of Code",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code. What will be printed? public class Flower { public String stemColor; public Flower() { stemColor=\"green\"; } public static void main(String[] args) { Flower[] garden = new Flower[5]; System.out.println( garden[0].stemColor ); }}",
+        "choices": [
+            "nothing will print",
+            "An error will occur",
+            "null",
+            "green"
+        ],
+        "answer": "null" 
+    },
+    {
+        "subtopic": "Output of Code",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In Lab 1 you were asked to write a program that would prompt for a name and age and it would print out the year the person was born. Here is part of that program: //ask user for their age and read it in System.out.println(\"What is your age?\"); age = scan.nextInt(); // calculate year born year = 2023 - age; // print output System.out.println(year + \" or \" + year-1); Assuming the user entered 18 for their age, what would the output be?",
+        "choices": [
+            "An error occurs",
+            "2004 or 2005",
+            "2005 or 2006",
+            "2005 or 2004"
+        ],
+        "answer": "2005 or 2006" 
+    },
+    {
+        "subtopic": "Function Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In HW 1 you were asked to implement the fuzzbizz function. What would the correct output for the following call? fuzzbizz (3, 7, 20);",
+        "choices": [
+            "none",
+            "bizz",
+            "fuzz"
+        ],
+        "answer": "fuzz" 
+    },
+    {
+        "subtopic": "Method Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In HW 1 you were asked to implement the hilo method to have the computer 'guess' the randomly chosen number. Given the following call to the method, which of the following would be an incorrect result? int x = hilo(100, 99);",
+        "choices": [
+            "101",
+            "100",
+            "1",
+            "99"
+        ],
+        "answer": "101" 
+    },
+    {
+        "subtopic": "Explicit Casts",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "An explicit cast statement is required in which of the following situations?",
+        "choices": [
+            "All of these require an explicit cast.",
+            "storing a float in an int",
+            "storing an int in a float",
+            "storing a float in a double",
+            "using charAt to take an element of a String and store it in a char"
+        ],
+        "answer": "All of these require an explicit cast." 
+    },
+    {
+        "subtopic": "Final Variables",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code. At the end of the execution of the code, what is the value of x? final int NUMBER_OF_LETTERS = 26; NUMBER_OF_LETTERS = 10;",
+        "choices": [
+            "10",
+            "26",
+            "Nothing, the code does not compile"
+        ],
+        "answer": "Nothing, the code does not compile" 
+    },
+    {
+        "subtopic": "Variable Declaration Errors",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following variable declarations will raise an error?",
+        "choices": [
+            "String y = new String(\"Jonas\");",
+            "byte z = 1000;"
+        ],
+        "answer": "byte z = 1000;" 
+    },
+    {
+        "subtopic": "Print Statements",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "The following lines of code will print the exact same value: int x = 25; int y = 3; System.out.println((double)(x/y)); System.out.println((double)x/y);",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False" 
+    },
+    {
+        "subtopic": "Integer Division",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What value will z have if we execute the following assignment statement? int z = 50 / 10.0;",
+        "choices": [
+            "z will equal 5.0",
+            "z will equal 0",
+            "z will equal 0.5",
+            "an error occurs",
+            "z will equal 0.05"
+        ],
+        "answer": "an error occurs" 
+    },
+    {
+        "subtopic": "Switch Statement Execution",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Given the following code, what is the value of x after the code executes? int x = 3; switch (x) { case 1: x = 0; case 2: x++; case 3: x+=2; case 4: x--; case 5: x-=2; }",
+        "choices": [
+            "3",
+            "2",
+            "5",
+            "4"
+        ],
+        "answer": "5" 
+    },
+    {
+        "subtopic": "Logical Expressions",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "The expression (x && !y) is equivalent to which of the following expressions?",
+        "choices": [
+            "(!x || y)",
+            "(!x && y)",
+            "(x || !y)",
+            "!(!x || y)",
+            "!(!x && y)"
+        ],
+        "answer": "(!x && y)" 
+    },
+    {
+        "subtopic": "Switch Statement Validity",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following is NOT a valid reason for selecting a switch statement instead of an if statement?",
+        "choices": [
+            "The comparisons involve relational operations",
+            "Switch is faster",
+            "The value tested is a reference type",
+            "The value tested is an int",
+            "Only one value is tested"
+        ],
+        "answer": "Switch is faster" 
+    },
+    {
+        "subtopic": "Nested Loops Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What is the value of x after this code segment executes? int x = 0; for (int i = 1; i < 10; i++) { for (int j = 1; j <= i; j = j+2) { x+=3; } }",
+        "choices": [
+            "25",
+            "70",
+            "125",
+            "75",
+            "150",
+            "100"
+        ],
+        "answer": "75" 
+    },
+    {
+        "subtopic": "Character Printing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘D’ printed? System.out.println('B'); for (int i = 0; i < 2; ++i) { System.out.println('B'); for (int j = 0; j < 5; j++) System.out.println('C'); System.out.println('D'); } System.out.println('B');",
+        "choices": [
+            "10",
+            "5",
+            "4",
+            "2",
+            "Nothing is printed because the code does not run."
+        ],
+        "answer": "4" 
+    },
+    {
+        "subtopic": "Method Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following method: public static void exchange (int a, int b) { int temp; temp = a; a = b; b = temp; } If, in another method in the same class we have the following code: int one = 5; int two = 3; exchange(one, two); System.out.println(one + \" \" + two); What will be printed?",
+        "choices": [
+            "35",
+            "33",
+            "Nothing is printed because the code does not run.",
+            "53",
+            "55"
+        ],
+        "answer": "55" 
+    },
+    {
+        "subtopic": "Point Object Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code, what will be printed? class Point { int x = 0; int y = 0; public static void main(String[] args) { Point a1 = new Point(); Point a2 = new Point(); a2 = a1; a1.x = 5; System.out.print(a1.x); System.out.print(\",\"); System.out.print(a2.x); } }",
+        "choices": [
+            "5,5",
+            "0,5",
+            "0,0",
+            "5,0"
+        ],
+        "answer": "5,5" 
+    },
+    {
+        "subtopic": "Method Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following method: public static void swap (Point x, Point y) { Point temp; temp = x; x = y; y = temp; } If, in another method in the same class we have the following code (where Point contains an x and y value): Point one = new Point(5,5); Point two = new Point(3,3); swap(two, one); System.out.println(one.getX() + \" \" + two.getX()); What will be printed?",
+        "choices": [
+            "55",
+            "53",
+            "33",
+            "35"
+        ],
+        "answer": "35" 
+    },
+    {
+        "subtopic": "Memory Storage",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Suppose I instantiate an object like this: Point p1 = new Point(5,7); Which statement is true regarding how this variable is stored in memory?",
+        "choices": [
+            "p1 is a primitive type whose data is stored on the heap",
+            "p1 is a primitive type whose data is stored on the stack",
+            "p1 is a reference type whose data is stored on the stack",
+            "p1 is a reference type whose data is stored on the heap"
+        ],
+        "answer": "p1 is a reference type whose data is stored on the heap" 
+    },
+    {
+        "subtopic": "Actual Parameters",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following code. Which element is the Actual Parameter? class Donkey { int numberOfLegs=4; public static void main(String[] args) { Donkey mabel = new Donkey(); takeTripToMadLaboratory(mabel); System.out.println(mabel.numberOfLegs); } public static void takeTripToMadLaboratory(Donkey d) { d.numberOfLegs=d.numberOfLegs*2; }}",
+        "choices": [
+            "numberofLegs",
+            "mabel.numberofLegs",
+            "Donkey d",
+            "mabel"
+        ],
+        "answer": "mabel" 
+    },
+    {
+        "subtopic": "Method Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will the following code print out? public class Donkey { int numberOfLegs = 4; public static void main(String[] args) { Donkey mabel = new Donkey(); takeTripToMadLaboratory(mabel); System.out.println(mabel.numberOfLegs); } public static void takeTripToMadLaboratory(Donkey d) { d.numberOfLegs = d.numberOfLegs * 2; }}",
+        "choices": [
+            "8",
+            "3",
+            "16",
+            "4"
+        ],
+        "answer": "8" 
+    },
+    {
+        "subtopic": "Method Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the code below. Will it work? private static void display(int a) { System.out.println(\"Arguments: \" + a); } private static void display(int a, int b) { System.out.println(\"Arguments: \" + a + \" and \" + b); } private static void display(String st1, String st2) { System.out.println(\"Arguments: \" + st1 + \" and \" + st2); }",
+        "choices": [
+            "No, the code will compile but throw a runtime error",
+            "Yes, it will work",
+            "No, the code will compile, but some code will be unreachable (meaning it can never be executed - there's no way to get to it)",
+            "No, the code will not compile"
+        ],
+        "answer": "Yes, it will work" 
+    },
+    {
+        "subtopic": "Static Variable Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will the following code print out? public class Donkey { static String name = \"Mabel\"; public static void main(String[] args) { Donkey mabel = new Donkey(); Donkey janice = new Donkey(); janice.name = \"Janice\"; System.out.println(mabel.name + \" \" + janice.name); }}",
+        "choices": [
+            "Mabel Mabel",
+            "Janice Janice",
+            "Mabel Janice",
+            "Janice Mabel"
+        ],
+        "answer": "Janice Mabel" 
+    },
+    {
+        "subtopic": "Mathematics Class",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following Java class, which represents a small portion of the Mathematics class. You may assume the entire class is written appropriately including constructors, getters, setters, etc. public Class Mathematics { public String name; private int result; public void add(int a, int b) {} public void add(String s, String t) {} public void subtract(int a, int b) {} public void subtract(String s, String t) {} } In a separate class, an instance m of the Mathematics class is created. Which of the following code statements will NOT cause an error?",
+        "choices": [
+            "m.add(3,6.0)",
+            "m.subtract(152, m.result)",
+            "m.name",
+            "m.name()",
+            "m.add(\"abc\", 3)"
+        ],
+        "answer": "m.name" 
+    },
+    {
+        "subtopic": "Array Element Access",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Given the following array declaration, which of the following statements would print the third value in the array? double [] score = new double[5]; System.out.println(score[third]); System.out.println(score[2]); System.out.println(score[3]); System.out.println(score[5-2]);",
+        "choices": [
+            "ArrayIndexOutOfBounds exception",
+            "Pretzels",
+            "Doritos",
+            "Peanuts"
+        ],
+        "answer": "System.out.println(score[2]);" 
+    },
+    {
+        "subtopic": "Candy Calculation",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Assume an int array, candy, stores the number of candy bars sold by a group of children where candy[j] is the number of candy bars sold by child j. Assume there are 12 children in all. What does the method below do? public int calculate() { int value1 = 0; int value2 = 0; for (int j = 0; j < 12; j++) if (candy[j] > value1) { value1 = candy[j]; value2 = j; } return value2; }",
+        "choices": [
+            "It returns the index of the child who sold the most candy bars",
+            "It returns the total number of children who sold 0 candy bars",
+            "It returns the number of candy bars sold by the child who sold the most candy bars",
+            "It returns the total number of candy bars sold",
+            "It returns the total number of children who sold more than 0 candy bars"
+        ],
+        "answer": "It returns the index of the child who sold the most candy bars" 
+    },
+    {
+        "subtopic": "Array Indexing Error",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following declaration, creation, and initialization of a String array called “saltySnacks” then answer the question that follows: String[] saltySnacks = {\"Doritos\",\"Pretzels\",\"Peanuts\"}; What is the value in saltySnacks[3]?",
+        "choices": [
+            "ArrayIndexOutOfBounds exception",
+            "Pretzels",
+            "Doritos",
+            "Peanuts"
+        ],
+        "answer": "ArrayIndexOutOfBounds exception" 
+    },
+    {
+        "subtopic": "Element Addition",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following loops would adequately add 1 to each element stored in array? int[] array = { 1, 2, 3, 4 };",
+        "choices": [
+            "for (int x : array) array[x] += 1;",
+            "for (int x = 0; x <= array.length; x++) array[x]++;",
+            "for (int x = 1; x <= array.length; x++) array[x-1] += 1;",
+            "for (int x = 0; x < array.length; x++) x = array[x] + 1;",
+            "for (int x : array) x++;"
+        ],
+        "answer": "for (int x = 0; x < array.length; x++) array[x]++;" 
+    },
+    {
+        "subtopic": "Variable Declaration Errors",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following variable declarations will raise an error?",
+        "choices": [
+            "double[] d = {4.552, 6, 1.1};",
+            "int n = 2.000;",
+            "int c = (int)16.4;",
+            "String s = new String(\"Hello World\");",
+            "char x = 'm';"
+        ],
+        "answer": "int n = 2.000;"
+    },
+    {
+        "subtopic": "Creating Constants",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In order to create a constant, you would use which of the following Java reserved words?",
+        "choices": [
+            "private",
+            "static",
+            "class",
+            "final"
+        ],
+        "answer": "final"
+    },
+    {
+        "subtopic": "Identical Values",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "The values of (double) 5 / 2 and (double) (5 / 2) are identical.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False"
+    },
+    {
+        "subtopic": "Integer Division Result",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Assume that x, y, and z are all ints equal to 50, 20, and 6 respectively. What is the result of x / y / z?",
+        "choices": [
+            "16",
+            "A run-time error because this is a division by 0",
+            "A compile error as this is syntactically invalid",
+            "0"
+        ],
+        "answer": "16"
+    },
+    {
+        "subtopic": "Valid Declarations",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Which of the following are a valid declaration and instantiation of a primitive variable?",
+        "choices": [
+            "char middle = 'j';",
+            "char initial = j;",
+            "char first = 'j';",
+            "char last = 'j.';"
+        ],
+        "answer": "char middle = 'j';"
+    },
+    {
+        "subtopic": "Switch Statement Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will print? int x = 0; String word = \"\"; switch (x + 1) { case 4: word = \"peanut \"; case 3: word = \"green bean \"; case 2: word = \"cabbage \"; case 1: word = \"strawberry \"; default: word = \"apple \"; } System.out.println(\"The secret word is \" + word);",
+        "choices": [
+            "The secret word is strawberry",
+            "The secret word is apple",
+            "The secret word is strawberry apple",
+            "The code does not produce any output."
+        ],
+        "answer": "The secret word is strawberry"
+    },
+    {
+        "subtopic": "Conditional Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Assume that x, y, and z are all int variables. Consider the following code below. What is printed if x, y, and z are all equal to zero before the code segment executes?",
+        "choices": [
+            "1",
+            "2",
+            "4",
+            "0"
+        ],
+        "answer": "4"
+    },
+    {
+        "subtopic": "Character Printing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘B’ printed? System.out.println('A'); for (int i = 0; i < 3; ++i) { System.out.println('B'); for (int j = 0; j < 4; j++) System.out.println('C'); System.out.println('D'); } System.out.println('E');",
+        "choices": [
+            "3",
+            "1",
+            "4",
+            "12",
+            "0"
+        ],
+        "answer": "3"
+    },
+    {
+        "subtopic": "Nested If-Else",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following outline of a nested if-else structure which has more if clauses than else clauses. Which of the statements below is true regarding this structure?",
+        "choices": [
+            "statement2 will only execute if condition1 is true and condition2 is false",
+            "statement2 will only execute if condition1 is false, it does not matter what condition2 is",
+            "statement2 will never execute",
+            "syntactically it is invalid to have more if clauses than else clauses"
+        ],
+        "answer": "statement2 will only execute if condition1 is false and condition2 is false"
+    },
+    {
+        "subtopic": "Character Printing in Loop",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "For the following code segment, how many times is the character ‘C’ printed? System.out.println('A'); for (int i = 0; i < 3; ++i) { System.out.println('B'); for (int j = 0; j < 4; j++) System.out.println('C'); System.out.println('D'); } System.out.println('E');",
+        "choices": [
+            "12",
+            "3",
+            "1",
+            "4"
+        ],
+        "answer": "12"
+    },
+    {
+        "subtopic": "For Loop Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will be output by this code segment? for (int i = 5; i > 0; i--) { for (int j = 1; j <= i; j++) { System.out.print(j * j + \" \"); } System.out.println(); }",
+        "choices": [
+            "1 4 9 16 25",
+            "1 4 9 16",
+            "1 4 9",
+            "1 4"
+        ],
+        "answer": "1 4 9 16 25"
+    },
+    {
+        "subtopic": "If Else Structure",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "All if / if-else structures can be re-written as a switch statement.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False"
+    },
+    {
+        "subtopic": "Accessing Private Variables",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the class below. Where can the variable balance be legally accessed directly? public class Account { private double balance; }",
+        "choices": [
+            "within the Account class and any other classes in the same package",
+            "within the Account class only",
+            "nowhere, it's not possible to access balance directly",
+            "anywhere; any piece of code can access balance directly"
+        ],
+        "answer": "within the Account class only"
+    },
+    {
+        "subtopic": "Print Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will the following code print? public class Donkey { public int numberOfLegs = 4; public static void main(String[] args) { Donkey mabel = new Donkey(); Donkey janice = new Donkey(); mabel = janice; janice.numberOfLegs -= 1; System.out.print(mabel.numberOfLegs); System.out.print(\",\"); System.out.print(janice.numberOfLegs); } }",
+        "choices": [
+            "4,3",
+            "3,4",
+            "3,3",
+            "4,4"
+        ],
+        "answer": "3,3"
+    },
+    {
+        "subtopic": "Reference Modification",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "I have two references object1 and object2 (both are of the same type). I want to modify these references such that 'object1 == object2' is true. Which line of code will accomplish this task?",
+        "choices": [
+            "object1 == object2 will ALWAYS evaluate to true no matter what.",
+            "It is not possible for object1 == object2 to evaluate to true.",
+            "object1 = object2;",
+            "object1 = True;",
+            "object2 = True;"
+        ],
+        "answer": "object1 = object2;"
+    },
+    {
+        "subtopic": "Primitive vs Reference Types",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What is the main difference between a variable that is a primitive data type versus a reference?",
+        "choices": [
+            "Primitive values are stored in the runtime stack while reference data is stored on the heap",
+            "There is no difference between them",
+            "Primitives are part of the Java language, while reference data types are classes defined by libraries",
+            "Primitive values are stored on the heap and reference data is stored in the runtime stack"
+        ],
+        "answer": "Primitive values are stored in the runtime stack while reference data is stored on the heap"
+    },
+    {
+        "subtopic": "Pass by Value",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Java arguments are always 'pass by value'.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True"
+    },
+    {
+        "subtopic": "Method Behavior",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following method: public static void swap(int x, int y) { int temp; temp = x; x = y; y = temp; } If, in another method in the same class we have the following code: int one = 1; int two = 2; swap(one, two); System.out.println(one + \" \" + two); What will be printed?",
+        "choices": [
+            "2 2",
+            "1 2",
+            "1 1",
+            "Nothing is printed because the code does not run."
+        ],
+        "answer": "1 1"
+    },
+    {
+        "subtopic": "Print Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "What will the following code print out? public class Donkey { public static void main(String[] args) { int x=5; doubler(x); System.out.println(x); public static int doubler(int argument) { return argument * 2; } } }",
+        "choices": [
+            "Nothing is printed because the code does not run.",
+            "2",
+            "10",
+            "5"
+        ],
+        "answer": "5"
+    },
+    {
+        "subtopic": "Substring Value",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in the variable part? String temp = \"CS2100 is a party\"; temp = temp.toUpperCase(); int index = temp.indexOf('a'); int index2 = temp.indexOf('0'); String part = temp.substring(0,4);",
+        "choices": [
+            "CS2100",
+            "A compiler error occurs",
+            "CS210",
+            "CS21",
+            "CS2"
+        ],
+        "answer": "CS21"
+    },
+    {
+        "subtopic": "Method Compilation Error",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "The following method will not compile. Why not? public int countTeachingAssistants(Student[] roster) { for (Student s : roster) { if (s.isInterested()) { personCount++; } } }",
+        "choices": [
+            "parameters are invalid/wrong format",
+            "roster is not iterable",
+            "incorrect braces { }",
+            "missing return value"
+        ],
+        "answer": "missing return value"
+    },
+    {
+        "subtopic": "String Array Initialization",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the following declaration, creation, and initialization of a String array called “cities” then answer the question that follows: String[] cities = {\"Charlottesville\", \"Edinburgh\", \"Lisbon\", \"Jakarta\", \"Dubai\", \"Tokyo\", \"Melbourne\", \"Buenos Aires\"}; What is the value in cities[0] and cities[5]?",
+        "choices": [
+            "\"Charlottesville\", \"Dubai\"",
+            "\"Buenos Aires\", \"Lisbon\"",
+            "\"Charlottesville\", \"Tokyo\"",
+            "\"\", {\"Charlottesville\", \"Edinburgh\", \"Lisbon\", \"Jakarta\", \"Dubai\", \"Tokyo\"}",
+            "NULL, \"Dubai\""
+        ],
+        "answer": "\"Charlottesville\", \"Dubai\""
+    },
+    {
+        "subtopic": "Array Indexing",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in variable a? int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; int a = arr[arr.length / arr[3]];",
+        "choices": [
+            "3",
+            "An error occurs",
+            "2",
+            "4"
+        ],
+        "answer": "3"
+    },
+    {
+        "subtopic": "Looping Through Arrays",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the code below. Which loop will not work to iterate over the argument array? public void processPayroll(Check[] paychecks) { ... } for (int p = 0; p < paychecks.length; p++) { ... process } int t = 0; while (t < paychecks.length) { ... process t++; } for (int i = 0; i < paychecks.length; i++) { ... process } for (Check c : paychecks) { ... process }",
+        "choices": [
+            "for (Check c : paychecks) { ... process }",
+            "for (int i = 0; i < paychecks.length; i++) { ... process }",
+            "int t = 0; while (t < paychecks.length) { ... process t++; }",
+            "for (int p = 0; p < paychecks.length; p++) { ... process }"
+        ],
+        "answer": "for (Check c : paychecks) { ... process }"
+    },
+    {
+        "subtopic": "Final Array Size",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "After the following code executes, what is the value in variable a? int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; int a = arr.length;",
+        "choices": [
+            "10",
+            "9",
+            "An error occurs",
+            "11"
+        ],
+        "answer": "10"
+    },
+    {
+        "subtopic": "Loop Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Assume I have declared an integer array of size 16, populated with random integers from 1-100. I run the following code on this array: for (int x = 1; x <= 16; x = x*2) { if (arr[x-1] > 50) { System.out.println(\"foo\"); } if (arr[x-1] % 10 == 3) { System.out.println(\"bar\"); } else if (arr[x-1] < 50) { System.out.println(\"hello\"); } else { System.out.println(\"world\"); } } What is the maximum number of lines that could be printed to the console? (The actual output doesn’t matter, just the number of lines.)",
+        "choices": [
+            "5",
+            "20",
+            "8",
+            "10",
+            "16"
+        ],
+        "answer": "16"
+    },
+    {
+        "subtopic": "Array Declaration",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "Consider the array declaration and instantiation: int[] arr = new int[5]; Which of the following is true about arr?",
+        "choices": [
+            "It stores 5 elements with legal indices between 0 and 4",
+            "It stores 5 elements with legal indices between 0 and 5",
+            "It stores 6 elements with legal indices between 0 and 5",
+            "It stores 5 elements with legal indices between 1 and 5",
+            "It stores 4 elements with legal indices between 1 and 4"
+        ],
+        "answer": "It stores 5 elements with legal indices between 0 and 4"
+    },
+    {
+        "subtopic": "Method Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In HW 1 you were asked to implement the hilo method to have the computer \"guess\" the randomly chosen number. Given the following call to the method, which of the following would be an incorrect result? int x = hilo(100, 99);",
+        "choices": [
+            "99",
+            "1",
+            "100",
+            "101"
+        ],
+        "answer": "101"
+    },
+    {
+        "subtopic": "Finding Longest String",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In Lab 2 you were asked to find the longest string within an array of strings. Which of the following would be the correct method header?",
+        "choices": [
+            "public int findLongest(String[] strArr) { ... }",
+            "public static int findLongest(String strArr) { ... }",
+            "public static findLongest(String[] strArr) { ... }",
+            "public static int findLongest(String[] strArr) { ... }"
+        ],
+        "answer": "public static int findLongest(String[] strArr) { ... }"
+    },
+    {
+        "subtopic": "Fuzzbizz Function Output",
+        "topic": "Programming",
+        "difficulty": 2,
+        "question_text": "In HW 1 you were asked to implement the fuzzbizz function. What would the correct output for the following call? Method header: public static String fuzzbizz(int one, int two, int input) { ... } fuzzbizz(3, 7, 27);",
+        "choices": [
+            "none",
+            "fuzz",
+            "fuzzbizz",
+            "bizz"
+        ],
+        "answer": "fuzz"
+    }
+]
