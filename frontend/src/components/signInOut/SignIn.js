@@ -1,9 +1,12 @@
-import { UserAuth } from '../context/AuthContext';
+import React, { useEffect } from 'react';
+import './SignButtons.css';
+import { UserAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import './Start.css'; 
 
 const SignIn = () => {
+  // destructure object
   const { googleSignIn } = UserAuth();
+  // navigate instance
   const navigate = useNavigate();
 
   // make sign-in call
@@ -18,7 +21,7 @@ const SignIn = () => {
 
   return (
     <div>
-      <button className="start-button" onClick={handleGoogleSignIn}>Get Started →</button>
+      <button className="sign-in-or-out" onClick={handleGoogleSignIn}>Sign In</button>
     </div>
   );
 };

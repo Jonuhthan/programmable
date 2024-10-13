@@ -1,7 +1,7 @@
 import React from 'react';
 import './LandingPage.css';
-import Header from './../components/Header';
-import Start from '../components/Start';
+import Header from '../components/header/Header';
+import Start from '../components/start/Start';
 
 const LandingPage = () => {
     return (

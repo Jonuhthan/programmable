@@ -1,10 +1,10 @@
 import React from 'react';
-import SignIn from './SignIn';
-import { UserAuth } from '../context/AuthContext';
+import SignIn from '../signInOut/SignIn';
+import { UserAuth } from '../../context/AuthContext';
 import './Header.css';
-import SignOut from './SignOut';
+import SignOut from '../signInOut/SignOut';
 
-const HeaderHome = () => {
+const Header = () => {
     const { user } = UserAuth();
 
     return (
@@ -12,9 +12,11 @@ const HeaderHome = () => {
             <header>
                 <nav>
                     <div className="logo"><a href="/">Programmable</a></div>
-                    <div className="welcome">
-                        Welcome back, {user.displayName} 👋
-                    </div>
+                    <ul className="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                     <div className="auth-buttons">
                         {user?.displayName ? (
                             <SignOut />
@@ -28,4 +30,4 @@ const HeaderHome = () => {
     );
 };
 
-export default HeaderHome;
+export default Header;
