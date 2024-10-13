@@ -7,8 +7,11 @@ def create_app():
     app = Flask(__name__)  # Create a new Flask app
     app.config.from_object('config.Config')  # Load configuration from config.py
 
-    with app.app_context():
-        db.init_app(app)  # Initialize the database with the app
+    db.init_app(app)  # Initialize the database with the app
 
-        from . import routes  # Import routes
-        return app # Return the app
+    with app.app_context():
+        db.create_all()
+
+    app.register_blueprint(routes_bp)  # Register the routes blueprint
+    
+    return app
