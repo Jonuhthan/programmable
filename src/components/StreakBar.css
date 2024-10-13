@@ -1,0 +1,31 @@
+.navbar {
+    position: relative;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 10px 20px;
+    background-color: #1a1a1a;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}
+  
+  .streak-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #666;
+    border-radius: 10px;
+    width: 200px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    background-color: #66cc66;
+    height: 100%;
+  }  

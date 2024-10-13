@@ -1,13 +1,33 @@
 import React from 'react';
-import { UserAuth } from '../context/AuthContext';
 import HeaderHome from '../components/HeaderHome';
+import CategoryCard from '../components/CategoryCard';
+import StreakBar from '../components/StreakBar';
+import javaImage from '../assets/images/java.png';
+import pythonImage from '../assets/images/python.png';
+import sqlImage from '../assets/images/mySQL.png';
+import './HomePage.css';
 
 const HomePage = () => {
-    const { user } = UserAuth();
+    const categories = [
+        { title: 'Java Foundations', description: 'Practice the foundational skills of Java', imageSrc: javaImage },
+        { title: 'Python', description: 'Practice Python basics', imageSrc: pythonImage },
+        { title: 'mySQL', description: 'Pratice mySQL basics', imageSrc: sqlImage },
+      ];
+
     return (
-        <div>
+        <div className="home-page">
             <HeaderHome />
-            Welcome, {user.displayName}
+            <StreakBar />
+            <div className="category-container">
+                {categories.map((category, index) => (
+                    <CategoryCard
+                        key={index}
+                        title={category.title}
+                        description={category.description}
+                        imageSrc={category.imageSrc}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
