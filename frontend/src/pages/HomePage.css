@@ -9,9 +9,9 @@
 .category-container {
     display: flex; 
     flex-wrap: wrap;
-    justify-content: space-around; 
-    gap: 10px; /* Space between cards */
-    margin-top: 150px; /* Space above the category container */
+    justify-content: center; 
+    gap: 25px;
+    margin-top: 40px; /* Space above the category container */
 }
   
 .header-home {
