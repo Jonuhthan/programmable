@@ -1,7 +1,7 @@
 import React from 'react';
 import './StreakBar.css';
 
-const StreakBar = ({ streakDays }) => {
+const StreakBar = ({ streakDays=0 }) => {
   return (
     <div className="navbar">
       <h1>Start practicing and building your daily streak!</h1>
@@ -10,7 +10,7 @@ const StreakBar = ({ streakDays }) => {
         <div className="progress-bar">
           <div className="progress" style={{ width: '70%' }}></div>
         </div>
-        <span>70/100 daily</span>
+        <span>7/10 Daily Questions</span>
       </div>
     </div>
   );
