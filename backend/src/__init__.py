@@ -1,6 +1,7 @@
 # Intialize Flask Application
 from flask import Flask
 from .models import db  # Import the database instance from models
+from .config import Config
 
 def create_app():
     app = Flask(__name__)  # Create a new Flask app
