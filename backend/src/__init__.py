@@ -5,7 +5,7 @@ from .config import Config
 
 def create_app():
     app = Flask(__name__)  # Create a new Flask app
-    app.config.from_object('config.Config')  # Load configuration from config.py
+    app.config.from_object('src.config.Config')  # Load configuration from config.py
 
     db.init_app(app)  # Initialize the database with the app
 
@@ -13,5 +13,5 @@ def create_app():
         db.create_all()
 
     app.register_blueprint(routes_bp)  # Register the routes blueprint
-    
+
     return app
